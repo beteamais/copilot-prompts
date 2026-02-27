@@ -1,0 +1,171 @@
+Olá, Elisabete! 👋  
+Recebi suas informações do entrevistador.
+
+Vejo que você escolheu **Cientista de Dados / Data Scientist** e tem **10 horas por semana** para estudar. Perfeito!
+
+Vou montar agora seu plano completo personalizado…
+
+***
+
+🧩 **VISÃO DO DIA A DIA**
+
+Como é o trabalho de um(a) **Cientista de Dados**:
+
+*   Coletar, limpar e entender dados de múltiplas fontes (ETL/ELT leve).
+*   Explorar dados (EDA) para encontrar padrões e hipóteses.
+*   Construir e avaliar modelos estatísticos e de Machine Learning.
+*   Comunicar insights com clareza (notebooks, dashboards, apresentações).
+*   Colaborar com engenheiros, produto e stakeholders para levar modelos para produção e medir impacto.
+
+***
+
+🧠 **MAPA DE SKILLS**
+
+**CORE SKILLS (essenciais):**
+
+*   Python para dados (pandas, numpy, scikit-learn)
+*   Estatística e probabilidade (teste de hipóteses, métricas, avaliação de modelos)
+*   SQL para análise e manipulação de dados
+
+**NICE-TO-HAVE (complementares):**
+
+*   Visualização e storytelling (Matplotlib/Seaborn/Plotly, Power BI)
+*   Fundamentos de deploy/ML Ops leve (API com FastAPI, versionamento de modelos, tracking)
+
+**FERRAMENTAS E TECNOLOGIAS:**
+
+*   Jupyter/VS Code, Git/GitHub
+*   Pandas, NumPy, Scikit-learn, Seaborn/Plotly
+*   SQL (PostgreSQL/MySQL), Power BI
+*   FastAPI para servir modelos, Docker (noções)
+
+***
+
+📅 **ROADMAP DE 90 DIAS**
+
+**ADAPTADO PARA:** 10 horas/semana
+
+### **MÊS 1 - FUNDAMENTOS**
+
+**SEMANA 1-2:**
+
+*   Reforçar Python para dados: índices, groupby, merges, pivot, apply; boas práticas (funções, módulos).
+*   Estatística prática: distribuições, média/mediana/desvio, A/B testing, correlação vs causalidade, validação cruzada.
+
+**SEMANA 3-4:**
+
+*   SQL essencial: SELECT, WHERE, JOINs, agregações, window functions básicas.
+*   EDA de ponta a ponta: pipeline de limpeza (missing, outliers, encoding), visualizações narrativas (Seaborn/Plotly).
+
+### **MÊS 2 - PRÁTICA**
+
+**SEMANA 5-6:**
+
+*   Modelagem supervisionada: regressão linear/logística, árvores, métricas (RMSE, ROC-AUC, F1), tuning com GridSearch/RandomizedSearch.
+*   Engenharia de atributos e validação: pipelines do scikit-learn, leakage, baseline vs modelo.
+
+**SEMANA 7-8:**
+
+*   ML aplicado a negócio: classificação (churn/fraude), regressão (forecast simples), segmentação (KMeans).
+*   Storytelling de resultados: relatórios em notebook e mini-dashboard no Power BI (ou Plotly Dash).
+
+### **MÊS 3 - PORTFÓLIO E PREPARAÇÃO**
+
+**SEMANA 9-10:**
+
+*   Deploy leve: expor modelo via FastAPI (predict endpoint), estruturar repositório, README profissional.
+*   MLOps introdutório: versionar dados/modelos, salvar artefatos (joblib), métricas pós-deploy (conceito).
+
+**SEMANA 11-12:**
+
+*   Finalizar projeto de portfólio (tests, documentação, demo vídeo curto).
+*   Preparação de entrevistas: revisão de estatística/ML, SQL prática, perguntas comportamentais e de projeto.
+
+> **Regra de ouro (10h/sem):** 2 h/dia útil ou blocos de 3–4 h no fim de semana. Se faltar tempo, priorize **EDA + ML supervisionado + Projeto**.
+
+***
+
+🚀 **PROJETO DE PORTFÓLIO**
+
+**PROJETO:** Predição de Churn com API de Inferência e Dashboard de Monitoramento
+
+**O QUE FAZER:**  
+Construir um pipeline de dados → EDA → modelo de classificação de churn (ex.: telecom, SaaS ou banco de dados público) → servir o modelo via API (FastAPI) → criar um dashboard (Power BI ou Plotly Dash) mostrando métricas do modelo e insights de negócio.
+
+**ENTREGÁVEIS:**
+
+*   Repositório GitHub com código organizado (src/, notebooks/, data/), README claro e instruções de execução.
+*   API de previsão (FastAPI) com endpoint `/predict` documentado (Swagger/OpenAPI).
+*   Dashboard com: taxa de churn por segmento, importância de features, ROC/AUC, matriz de confusão.
+
+**CRITÉRIOS DE ACEITAÇÃO:**
+
+*   Dados tratados e explicados (decisões de limpeza e encoding justificadas).
+*   Baseline comparado com pelo menos 2 modelos; métricas reportadas e interpretadas.
+*   Projeto reproduzível (requirements.txt/poetry, passos no README) e demo funcional (vídeo curto ou screenshots).
+
+**DICA:** Comece simples (logística + baseline forte), documente cada decisão e só então faça otimizações (árvores, XGBoost) e refino de features.
+
+***
+
+💬 **ROTEIRO DE ENTREVISTAS**
+
+**PERGUNTA 1:** “Conte um projeto de dados do qual você se orgulha.”  
+**COMO RESPONDER:**
+
+*   **Contexto:** problema de churn em telecom com dados desbalanceados.
+*   **Ação:** EDA, baseline com regressão, SMOTE testado, depois XGBoost com validação estratificada.
+*   **Resultado:** +8 p.p. em recall do churn, priorizando retenção.
+*   **Aprendizado:** importância de evitar leakage e de alinhar métrica ao objetivo de negócio.
+
+**PERGUNTA 2:** “Como você lida com dados ausentes e outliers?”  
+**COMO RESPONDER:**
+
+*   **Diagnóstico:** análise por coluna, mecanismo de ausência (MCAR/MAR/MNAR).
+*   **Técnicas:** imputação por mediana/mediana por grupo, modelos para imputação (KNN), winsorization/log-transform.
+*   **Validação:** comparar impacto em métricas; documentar escolhas.
+
+**PERGUNTA 3:** “Qual métrica você usaria neste problema?”  
+**COMO RESPONDER:**
+
+*   **Raciocínio:** depende do custo de erro; para churn, foco em **recall**/F1; para fraude, **precision** ou PR AUC; para regressão, **MAE** se outliers importam.
+*   **Conclusão:** escolher métrica alinhada ao objetivo e reportar trade-offs.
+
+**PERGUNTA 4:** “Explique overfitting e como evitar.”  
+**COMO RESPONDER:**
+
+*   **Conceito:** modelo memoriza ruído.
+*   **Sinais:** alta performance no treino, baixa no teste.
+*   **Mitigação:** cross-validation, regularização, early stopping, mais dados, features robustas.
+
+**PERGUNTA 5:** “Como você colocaria um modelo em produção?”  
+**COMO RESPONDER:**
+
+*   **Pipeline:** pré-processamento consistente (pipelines do sklearn) → serialização (joblib) → API (FastAPI) → logs/metricas → monitorar drift.
+*   **Boas práticas:** versionamento (Git), ambiente reprodutível, testes unitários, documentação.
+
+***
+
+🎓 **TRILHA DIO RECOMENDADA**
+
+**TRILHA:** *Formação Cientista de Dados com Python* (ou *Bootcamps de Data Science & Analytics* na DIO)
+
+**POR QUE ESSA TRILHA:**
+
+*   Conecta diretamente com Python, Estatística, SQL e ML — pilares do seu roadmap.
+*   Normalmente inclui projetos guiados e desafios de código que você pode integrar ao seu portfólio.
+
+**PRÓXIMOS PASSOS:**
+
+1.  Acesse **dio.me**
+2.  Busque por **“Cientista de Dados com Python”** ou **“Data Science & Analytics”**
+3.  Inscreva-se gratuitamente
+4.  Siga o cronograma junto com este roadmap
+
+***
+
+✨ Seu plano está pronto!
+
+Lembre-se: o mais importante é a constância, não a velocidade. Comece pela **Semana 1** e vá no seu ritmo.
+
+Quer que eu transforme esse roadmap em um **checklist semanal** ou um **cronograma no Excel/Calendar** para você acompanhar as 10h/semana? Também posso adaptar o projeto de portfólio para um tema do seu interesse (finanças, saúde, varejo).
